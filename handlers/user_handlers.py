@@ -35,7 +35,6 @@ async def process_game_button(message: Message):
     await message.answer(text=LEXICON_RU[winner], reply_markup=yes_no_kb)
 
 
-
 # Функция для регистрации хэндлеров в диспетчере. Вызывается в исполняемом файле bot.py
 def register_user_handlers(dp: Dispatcher):
     dp.register_message_handler(process_start_command, commands='start')
