@@ -7,7 +7,7 @@ from config_data.config import Config, load_config
 from handlers.user_handlers import register_user_handlers
 from handlers.other_handlers import register_other_handlers
 
-# инициализируем логгер
+# inition logger
 logger = logging.getLogger(__name__)
 
 
@@ -44,6 +44,7 @@ async def main():
 
     finally:
         await bot.close()
+
 
 if __name__ == "__main__":
     try:

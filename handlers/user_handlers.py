@@ -22,7 +22,7 @@ async def process_yes_answer(message: Message):
     await message.answer(text=LEXICON_RU['yes'], reply_markup=game_kb)
 
 
-#handler 'yes' answer
+#handler 'no' answer
 async def process_no_answer(message: Message):
     await message.answer(text=LEXICON_RU['no'])
 
@@ -31,7 +31,7 @@ async def process_no_answer(message: Message):
 async def process_game_button(message: Message):
     bot_choice = get_bot_choice()
     await message.answer(text=f'{LEXICON_RU["bot_choice"]} - {LEXICON_RU[bot_choice]}')
-    winner = get_winner()
+    winner = get_winner(message.text, bot_choice)
     await message.answer(text=LEXICON_RU[winner], reply_markup=yes_no_kb)
 
 
