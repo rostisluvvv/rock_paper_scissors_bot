@@ -24,7 +24,7 @@ def get_winner(user_choice: str, bot_choice: str) -> str:
     if user_choice == bot_choice:
         return 'nobody_won'
 
-    elif result[user_choice] == bot_choice
+    elif result[user_choice] == bot_choice:
         return 'user_won'
 
     else:
